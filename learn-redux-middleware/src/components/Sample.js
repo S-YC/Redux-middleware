@@ -1,7 +1,6 @@
 import React from 'react'
 
 const Sample = ({ loadingPost, loadingUsers, post, users }) => {
-    console.log(post)
     return (
         <div>
             <section>
