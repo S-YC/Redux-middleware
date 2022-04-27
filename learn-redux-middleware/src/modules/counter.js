@@ -16,7 +16,13 @@ export const increaseAsync = () => dispatch => {
 export const decreaseAsync = () => dispatch => {
     setTimeout(() => {
         dispatch(decrease())
-    }, 1000)
+    }, 1000)    
+
+
+
+
+
+    
 };
 
 const initalState = 0; //객체값이 아닌 숫자도 잘 작동합니다.
