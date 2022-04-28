@@ -18,43 +18,7 @@ const GET_USERS_FAILURE = "sample/GET_USERS_FAILURE"
 // thunk 함수 내부에서는 시작할 떄, 성공했을 떄, 실패했을 때 다른 액션을 디스패치합니다.
 
 export const getPost = createRequestThunk(GET_POST, api.getPost)
-export const getUSers = createRequestThunk(GET_USERS, api.getUsers);
-
-// export const getPost = id => async dispatch => {
-//     dispatch({ type: GET_POST }) // 요청 시작을 알리는 타입
-//     try {
-//         const response = await api.getPost(id)
-//         dispatch({
-//             type: GET_POST_SUCCESS,
-//             payload: response.data
-//         }) // 요청 성공
-//     } catch (e) {
-//         dispatch({
-//             type: GET_POST_FAILURE,
-//             payload: e,
-//             error: true
-//         }) // 에러 호출
-//         throw e // 컴포넌트단에서 에러를 조회할 수 있게 해 줌
-//     }
-// }
-
-// export const getUsers = () => async dispatch => {
-//     dispatch({ type: GET_USERS }) // 요청 시작을 알리는 타입
-//     try {
-//         const response = await api.getUsers();
-//         dispatch({
-//             type: GET_USERS_SUCCESS,
-//             payload: response.data,
-//         }); // 요청 성공
-//     } catch (e) {
-//         dispatch({
-//             type: GET_USERS_FAILURE,
-//             payload: e,
-//             error: true,
-//         }); // 에러 호출
-//         throw e; // 컴포넌트단에서 에러를 조회할 수 있게 해 줌
-//     }
-// }
+export const getUsers = createRequestThunk(GET_USERS, api.getUsers)
 
 // 초기 상태를 선언합니다.
 // 요청의 로딩 중 상태는 loading이라는 객체에 관리합니다.

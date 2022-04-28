@@ -1,7 +1,8 @@
 export default function createRequestThunk(type, request){
     // 성공 및 실패 액션타입 정의
-    const SUCCESS = `${type}_SUCESS`
+    const SUCCESS = `${type}_SUCCESS`
     const FAILURE = `${type}_FAILURE`
+    console.log(SUCCESS)
     return parms => async dispatch => {
         dispatch({ type }) //시작
         try {
